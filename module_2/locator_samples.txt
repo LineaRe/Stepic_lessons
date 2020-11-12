@@ -1,0 +1,5 @@
+input [id="name"]
+//input [@id='lastname']
+input [class="form-control third"]
+//input [@data-attribute='4']
+//input [@class='form-control fifth']
