@@ -37,8 +37,8 @@ def test_new_user_registration():
 
         welcome_message = browser.find_element_by_css_selector(welcome_text_locator).text
 
-        assert welcome_text == welcome_message, "New user"
+        assert welcome_text == welcome_message, "New user couldn`t register"
 
     finally:
-        time.sleep(10)
+        time.sleep(7)
         browser.quit()
