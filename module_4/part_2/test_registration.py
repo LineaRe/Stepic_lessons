@@ -18,9 +18,6 @@ main_login_locator = "Войти или зарегистрироваться"
 email_entry_field_locator = "id_registration-email"
 password_entry_field_locator = "id_registration-password1"
 rep_password_entry_field_locator = "id_registration-password2"
-
-
-
 welcome_text = "Спасибо за регистрацию!"
 browser = webdriver.Chrome()
 

@@ -1,32 +1,29 @@
 from selenium import webdriver
-import time
 import pytest
+from selenium.webdriver.chrome.options import Options
 
 
+#Arrange
 main_page_link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
 basket_text_locator = "//div[2]/form/button"
+language_locator = "[selected='selected']"
 
-basket_tr_text = "Добавить в корзину"
-browser = webdriver.Chrome()
-ru_basket_text = ""
-en_basket_test = ""
-es_basket_test = ""
-fr_basket_test = ""
-
-
-
-@pytest.mark.parametrize('language', ["ru", "en-gb", "es", "fr"])
-def test_basket_text(browser, language):
-    link = f"http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/{language}/"
-    browser.get(link)
-    browser.find_element_by_xpath(basket_text_locator)
-    try:
-        basket_text = browser.find_element_by_xpath(basket_text_locator).text
-        assert basket_tr_text == basket_text, "Test passed"
-
-    finally:
-        time.sleep(10)
-        browser.quit()
+exp_btn_text_dict = {
+    "ru": "Добавить в корзину",
+    "en-GB": "Add to basket",
+    "es": "Añadir al carrito",
+    "fr": "Ajouter au panier"
+}
 
 
-test_basket_text()
+def test_add_to_basket_btn(browser):
+    expected_lang_code = browser.user_language
+    exp_btn_text = exp_btn_text_dict[expected_lang_code]
+
+    browser.get(main_page_link)
+
+    button_add_to_basket = browser.find_element_by_xpath(basket_text_locator)
+    successful_button_text = button_add_to_basket.text
+
+    assert exp_btn_text in successful_button_text, "Nope"
+

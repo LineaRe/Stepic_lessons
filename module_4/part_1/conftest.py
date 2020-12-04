@@ -1,18 +1,35 @@
 import pytest
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+
+
+def pytest_addoption(parser):
+    parser.addoption("--language", action="store", default="ru", help="Language for autotests")
 
 
 @pytest.fixture(scope="function")
-def browser():
+def browser(request):
+    language = request.config.getoption("language")
+
+    if language not in ["ru", "en-GB", "es", "fr"]:
+        raise pytest.UsageError("Test should contain language")
+
+    options = Options()
+    options.add_experimental_option("prefs", {"intl.accept_languages": language})
+
     print("\nstart browser for test..")
-    browser = webdriver.Chrome()
-    yield browser
+    web_page = webdriver.Chrome(options=options)
+    web_page.implicitly_wait(5)
+    web_page.user_language = language
+
+    yield web_page
+
     print("\nquit browser..")
-    browser.quit()
+    web_page.quit()
 
 
-@pytest.mark.parametrize('language', ["ru", "en-gb", "es", "fr"])
-def test_guest_should_see_basket_button(browser, language):
-    link = f"http://selenium1py.pythonanywhere.com/{language}/"
-    browser.get(link)
-    browser.find_element_by_css_selector("#login_link")
+# @pytest.mark.parametrize('language', ["ru", "en-gb", "es", "fr"])
+# def test_guest_should_see_basket_button(browser, language):
+#     link = f"http://selenium1py.pythonanywhere.com/{language}/"
+#     browser.get(link)
+#     browser.find_element_by_css_selector("#login_link")
