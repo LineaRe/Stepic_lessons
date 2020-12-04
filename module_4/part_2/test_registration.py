@@ -1,9 +1,12 @@
 from selenium import webdriver
 import time
 from faker import Faker
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
 import pytest
 
-
+# Arrange
 fake = Faker()
 reg_email = fake.email()
 reg_password = "zxcvbnm1234567"
@@ -26,7 +29,7 @@ def test_new_user_registration():
     try:
 
         browser.get(main_page_link)
-
+# Act
         browser.find_element_by_link_text(main_login_locator).click()
 
         input_login = browser.find_element_by_id(email_entry_field_locator)
@@ -40,10 +43,11 @@ def test_new_user_registration():
 
         browser.find_element_by_xpath(register_button_locator).click()
 
-        #waiting for welcome text
-        time.sleep(5)
-
-        welcome_message = browser.find_element_by_css_selector(welcome_text_locator).text
+        welcome = WebDriverWait(browser, 10).until(
+            EC.text_to_be_present_in_element((By.CSS_SELECTOR, "div.alertinner.wicon"), "Спасибо за регистрацию!")
+        )
+# Assert
+        welcome_message = browser.find_element_by_css_selector("div.alertinner.wicon").text
 
         assert welcome_text == welcome_message, "New user could not register"
 
