@@ -1,8 +1,3 @@
-from selenium import webdriver
-import pytest
-from selenium.webdriver.chrome.options import Options
-
-
 #Arrange
 main_page_link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
 basket_text_locator = "//div[2]/form/button"
@@ -25,5 +20,4 @@ def test_add_to_basket_btn(browser):
     button_add_to_basket = browser.find_element_by_xpath(basket_text_locator)
     successful_button_text = button_add_to_basket.text
 
-    assert exp_btn_text in successful_button_text, "Nope"
-
+    assert exp_btn_text in successful_button_text, "Button text is incorrect"
