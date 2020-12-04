@@ -26,10 +26,3 @@ def browser(request):
 
     print("\nquit browser..")
     web_page.quit()
-
-
-# @pytest.mark.parametrize('language', ["ru", "en-gb", "es", "fr"])
-# def test_guest_should_see_basket_button(browser, language):
-#     link = f"http://selenium1py.pythonanywhere.com/{language}/"
-#     browser.get(link)
-#     browser.find_element_by_css_selector("#login_link")
