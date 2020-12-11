@@ -19,7 +19,7 @@ def browser(request):
 
     print("\nstart browser for test..")
     web_page = webdriver.Chrome(options=options)
-    web_page.implicitly_wait(5)
+    # web_page.implicitly_wait(5)
     web_page.user_language = language
 
     yield web_page
