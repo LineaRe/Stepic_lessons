@@ -1,7 +1,7 @@
 import pytest
 from .base_page import BasePage
 from .locators import ProductPageLocators
-from .language_dict import LANGUAGE_DICT
+
 
 
 link = "http://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook_209"

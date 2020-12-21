@@ -10,9 +10,6 @@ link = "http://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook
 class TestProductPage:
 
     def test_guest_can_add_product_to_basket(self, browser):
-        # Data
-        template = "{} has been added to your basket."
-        product_name = "The shellcoder's handbook"
         page = ProductPage(browser, link)
         page.open()
         page.add_product_to_basket()
