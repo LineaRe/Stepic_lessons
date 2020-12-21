@@ -1,3 +1,4 @@
+import pytest
 from .pages.main_page import MainPage
 from .pages.login_page import LoginPage
 from .pages.main_page import MainPage
@@ -16,5 +17,16 @@ class TestMainPage:
         page = MainPage(browser, link)
         page.open()
         page.should_be_login_link()
+
+    def test_guest_can_find_all_items(self, browser):
+        page = MainPage(browser, link)
+        page.open()
+        page.find_items()
+
+    def test_change_language_to_russian(self, browser):
+        page = MainPage(browser, link)
+        page.open()
+        page.change_language()
+
 
 

@@ -3,6 +3,8 @@ from selenium.webdriver.common.by import By
 
 class MainPageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    SEARCH_BOX = (By.XPATH, "//form/div/input[@id='id_q']")
+    SEARCH_BUTTON = (By.XPATH, "//form/input[@class='btn btn-default']")
 
 
 class LoginPageLocators():

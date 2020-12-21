@@ -1,3 +1,4 @@
+import pytest
 from .base_page import BasePage
 from .locators import ProductPageLocators
 from .language_dict import LANGUAGE_DICT
@@ -30,19 +31,28 @@ class ProductPage(BasePage):
 
         assert product_price == price_in_message
 
-
     def check_add_to_basket_notification(self):
-        expected_notification_text = "The shellcoder's handbook has been added to your basket."
-        print(expected_notification_text)
+        expected_notification_text = "has been added to your basket."
         actual_notification_text = self.browser.find_element(*ProductPageLocators.ALERT_MESSAGE).text
         print(actual_notification_text)
 
-        # if actual_notification_text in LANGUAGE_DICT.values():
-        #     assert True
-        assert actual_notification_text == expected_notification_text
+        assert expected_notification_text in actual_notification_text
 
     def should_be_disappeared(self):
         assert self.is_not_element_present(*ProductPageLocators.ALERT_MESSAGE)
+
+    def delete_item_from_basket(self):
+        self.browser.find_element(*ProductPageLocators.VIEW_BASKET).click()
+        self.browser.find_element(*ProductPageLocators.DELETE_FROM_BASKET).click()
+
+        assert self.is_not_element_present(*ProductPageLocators.BASKET_RESULT)
+
+
+
+
+
+
+
 
 
 
