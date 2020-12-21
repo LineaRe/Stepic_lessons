@@ -15,12 +15,12 @@ class ProductPageLocators():
 
     PRODUCT_FORM = (By.CSS_SELECTOR, ".product.main")
     PRODUCT_NAME = (By.CSS_SELECTOR, "h1:nth-child(1)")
-    PRODUCT_PRICE = (By.CSS_SELECTOR, ".price_color:nth-child(2)")
+    PRODUCT_PRICE = (By.CSS_SELECTOR, ".price_color")
 
     ALERT_MESSAGE = (By.CSS_SELECTOR, ".alert:nth-child(1)")
-    PRODUCT_NAME_IN_ALERT = (By.CSS_SELECTOR, ".alert:nth-child(1) strong")
-    MESSAGE_TEXT = (By.CSS_SELECTOR, "")
-
+    PRODUCT_NAME_ACTUAL = (By.CSS_SELECTOR, ".alert:nth-child(1) strong")
+    MESSAGE_TEXT = ()
+    SUCCESS_MESSAGE = ()
     BASKET_PRICE_MESSAGE = (By.CSS_SELECTOR, ".alertinner>p>strong")
 
 
