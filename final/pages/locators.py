@@ -9,12 +9,14 @@ class MainPageLocators():
     LANGUAGE_LIST = (By.XPATH, "//div/select[@name='language']")
     LANGUAGE_SELECT = (By.TAG_NAME, "select")
     GO_BUTTON = (By.CSS_SELECTOR, "#language_selector > button")
-
+    RU_TEXT = (By.XPATH, "//div/strong[contains(text(),'Всего в корзине')]")
+    ENG_TEXT = (By.TAG_NAME, "h2")
 
 
 class LoginPageLocators():
     LOGIN_FORM = (By.CSS_SELECTOR, "#login_form")
     REGISTRATION_FORM = (By.CSS_SELECTOR, "#register_form")
+
 
 
 class ProductPageLocators():

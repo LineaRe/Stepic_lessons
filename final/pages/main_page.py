@@ -24,12 +24,20 @@ class MainPage(BasePage):
         goods = self.browser.find_element(*MainPageLocators.NUMBER_OF_ITEMS).text
         assert goods == "43"
 
-    def change_language(self):
+    def change_language_to_russian(self):
         self.browser.find_element(*MainPageLocators.LANGUAGE_LIST).click()
         select = Select(self.browser.find_element(*MainPageLocators.LANGUAGE_SELECT))
         select.select_by_value("ru")
         self.browser.find_element(*MainPageLocators.GO_BUTTON).click()
-        ru_test = self.browser.find_element_by_xpath("//div/strong[contains(text(),'Всего в корзине')]").text
+        ru_test = self.browser.find_element(*MainPageLocators.RU_TEXT).text
         assert ru_test == "Всего в корзине:"
+
+    def change_language_to_english(self):
+        self.browser.find_element(*MainPageLocators.LANGUAGE_LIST).click()
+        select = Select(self.browser.find_element(*MainPageLocators.LANGUAGE_SELECT))
+        select.select_by_value("en-gb")
+        self.browser.find_element(*MainPageLocators.GO_BUTTON).click()
+        eng_test = self.browser.find_element(*MainPageLocators.ENG_TEXT).text
+        assert eng_test == "Welcome!"
 
 

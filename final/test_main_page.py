@@ -26,7 +26,14 @@ class TestMainPage:
     def test_change_language_to_russian(self, browser):
         page = MainPage(browser, link)
         page.open()
-        page.change_language()
+        page.change_language_to_russian()
+
+    def test_change_language_to_english(self, browser):
+        page = MainPage(browser, link)
+        page.open()
+        page.change_language_to_english()
+
+
 
 
 

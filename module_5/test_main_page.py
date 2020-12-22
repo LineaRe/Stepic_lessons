@@ -28,5 +28,10 @@ class TestMainPage:
         page.open()
         page.change_language()
 
+    def test_guest_can_create_account(self, browser):
+        page = MainPage(browser, link)
+        page.open()
+        page.go_to_login_page()
+
 
 
