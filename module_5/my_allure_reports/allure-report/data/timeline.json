@@ -1,0 +1,121 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "children" : [ {
+    "name" : "polina-ThinkPad-T420",
+    "children" : [ {
+      "name" : "8081-MainThread",
+      "children" : [ {
+        "name" : "test_delete_item_from_basket",
+        "uid" : "ec12389b7a63e15a",
+        "parentUid" : "3ad5ffd37733dc4a45789a6c670d6214",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1608827184123,
+          "stop" : 1608827184123,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_guest_can_add_product_to_basket",
+        "uid" : "ece170a80f6023d9",
+        "parentUid" : "3ad5ffd37733dc4a45789a6c670d6214",
+        "status" : "broken",
+        "time" : {
+          "start" : 1608827184061,
+          "stop" : 1608827184061,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_message_disappeared_after_adding_product_to_basket",
+        "uid" : "c3c92c98ac08d65c",
+        "parentUid" : "3ad5ffd37733dc4a45789a6c670d6214",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1608827184115,
+          "stop" : 1608827184115,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_guest_can_see_success_message_after_adding_product_to_basket",
+        "uid" : "9b18848b6a284b07",
+        "parentUid" : "3ad5ffd37733dc4a45789a6c670d6214",
+        "status" : "broken",
+        "time" : {
+          "start" : 1608827184108,
+          "stop" : 1608827184108,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "3ad5ffd37733dc4a45789a6c670d6214"
+    }, {
+      "name" : "8087-MainThread",
+      "children" : [ {
+        "name" : "test_message_disappeared_after_adding_product_to_basket",
+        "uid" : "8ccbf194714b27d8",
+        "parentUid" : "044fd7e79e8b589bcc7e1b7db07f8715",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1608827229716,
+          "stop" : 1608827233331,
+          "duration" : 3615
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_guest_can_see_success_message_after_adding_product_to_basket",
+        "uid" : "8235506fa9860082",
+        "parentUid" : "044fd7e79e8b589bcc7e1b7db07f8715",
+        "status" : "passed",
+        "time" : {
+          "start" : 1608827224504,
+          "stop" : 1608827228220,
+          "duration" : 3716
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_delete_item_from_basket",
+        "uid" : "2da3850cb578ff3c",
+        "parentUid" : "044fd7e79e8b589bcc7e1b7db07f8715",
+        "status" : "skipped",
+        "time" : {
+          "start" : 1608827234837,
+          "stop" : 1608827238969,
+          "duration" : 4132
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_guest_can_add_product_to_basket",
+        "uid" : "75e0b7fc0e032e63",
+        "parentUid" : "044fd7e79e8b589bcc7e1b7db07f8715",
+        "status" : "passed",
+        "time" : {
+          "start" : 1608827218796,
+          "stop" : 1608827223036,
+          "duration" : 4240
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "044fd7e79e8b589bcc7e1b7db07f8715"
+    } ],
+    "uid" : "b967392daff7d6e84649eea8da623f33"
+  } ],
+  "name" : "timeline"
+}

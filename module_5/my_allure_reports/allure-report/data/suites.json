@@ -1,0 +1,69 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "children" : [ {
+    "name" : "untitled1.Stepik_Course_Autotests.module_5",
+    "children" : [ {
+      "name" : "test_product_page",
+      "children" : [ {
+        "name" : "TestProductPage",
+        "children" : [ {
+          "name" : "test_guest_can_add_product_to_basket",
+          "uid" : "75e0b7fc0e032e63",
+          "parentUid" : "7f5ad0481917b18a795350dd63e6b517",
+          "status" : "passed",
+          "time" : {
+            "start" : 1608827218796,
+            "stop" : 1608827223036,
+            "duration" : 4240
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "test_guest_can_see_success_message_after_adding_product_to_basket",
+          "uid" : "8235506fa9860082",
+          "parentUid" : "7f5ad0481917b18a795350dd63e6b517",
+          "status" : "passed",
+          "time" : {
+            "start" : 1608827224504,
+            "stop" : 1608827228220,
+            "duration" : 3716
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "test_message_disappeared_after_adding_product_to_basket",
+          "uid" : "8ccbf194714b27d8",
+          "parentUid" : "7f5ad0481917b18a795350dd63e6b517",
+          "status" : "skipped",
+          "time" : {
+            "start" : 1608827229716,
+            "stop" : 1608827233331,
+            "duration" : 3615
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "test_delete_item_from_basket",
+          "uid" : "2da3850cb578ff3c",
+          "parentUid" : "7f5ad0481917b18a795350dd63e6b517",
+          "status" : "skipped",
+          "time" : {
+            "start" : 1608827234837,
+            "stop" : 1608827238969,
+            "duration" : 4132
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        } ],
+        "uid" : "7f5ad0481917b18a795350dd63e6b517"
+      } ],
+      "uid" : "755e3d5eaeff0d6203336dfffbe25780"
+    } ],
+    "uid" : "45915e7774a5177f76f0856483230dd5"
+  } ],
+  "name" : "suites"
+}
