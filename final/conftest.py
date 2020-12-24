@@ -19,7 +19,7 @@ def browser(request):
     driver = request.config.getoption("browser")
 
     if driver not in ["chrome", "firefox"]:
-        raise pytest.UsageError("I don't know your browser, bitch!")
+        raise pytest.UsageError("I don't know your browser!")
 
     options = Options()
     options.add_experimental_option("prefs", {"intl.accept_languages": language})
