@@ -13,13 +13,17 @@ class MainPageLocators():
     ENG_TEXT = (By.TAG_NAME, "h2")
 
 
-class LoginPageLocators():
+class LoginPageLocators:
     LOGIN_FORM = (By.CSS_SELECTOR, "#login_form")
     REGISTRATION_FORM = (By.CSS_SELECTOR, "#register_form")
+    EMAIL_ENTRY_FIELD = (By.ID, "id_registration-email")
+    PASSWORD_ENTRY_FIELD = (By.ID, "id_registration-password1")
+    REPEAT_PASSWORD_ENTRY_FIELD = (By.ID, "id_registration-password2")
+    REGISTRATION_BUTTON = (By.NAME, "registration_submit")
+    WELCOME_MESSAGE_ALERT = (By.CSS_SELECTOR, "div.alertinner.wicon")
 
 
-
-class ProductPageLocators():
+class ProductPageLocators:
     ADD_TO_BASKET_BUTTON = (By.CLASS_NAME, "btn-add-to-basket")
 
     PRODUCT_FORM = (By.CSS_SELECTOR, ".product.main")

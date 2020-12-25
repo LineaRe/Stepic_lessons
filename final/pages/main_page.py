@@ -1,4 +1,3 @@
-from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 from .base_page import BasePage
 from .locators import MainPageLocators
