@@ -3,7 +3,7 @@ from .locators import MainPageLocators
 from .base_page import BasePage
 from faker import Faker
 
-#Data
+# Data
 fake = Faker()
 reg_email = fake.email()
 reg_password = "zxcvbnm1234567"
@@ -22,11 +22,9 @@ class LoginPage(BasePage):
 
     def should_be_login_form(self):
         self.is_element_present(*LoginPageLocators.LOGIN_FORM), "Login form is not presented"
-        # assert True
 
     def should_be_register_form(self):
         self.is_element_present(*LoginPageLocators.REGISTRATION_FORM), "Registration form is not presented"
-        # assert True
 
     def go_to_login_page(self):
         login_link = self.browser.find_element(*MainPageLocators.LOGIN_LINK)
@@ -37,8 +35,10 @@ class LoginPage(BasePage):
         self.browser.find_element(*LoginPageLocators.PASSWORD_ENTRY_FIELD).send_keys(reg_password)
         self.browser.find_element(*LoginPageLocators.REPEAT_PASSWORD_ENTRY_FIELD).send_keys(reg_password)
 
-        self.browser.find_element(*LoginPageLocators.REGISTRATION_BUTTON).click()
+        self.register_button_click()
         welcome_message = self.browser.find_element(*LoginPageLocators.WELCOME_MESSAGE_ALERT).text
 
         assert welcome_text == welcome_message, "New user could not register"
 
+    def register_button_click(self):
+        self.browser.find_element(*LoginPageLocators.REGISTRATION_BUTTON).click()

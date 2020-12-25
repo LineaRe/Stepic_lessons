@@ -2,13 +2,6 @@ from selenium.webdriver.support.ui import Select
 from .base_page import BasePage
 from .locators import MainPageLocators
 from .login_page import LoginPage
-from .login_page import LoginPageLocators
-from faker import Faker
-
-
-# fake = Faker()
-# reg_email = fake.email()
-# reg_password = "zxcvbnm1234567"
 
 
 class MainPage(BasePage):
@@ -46,9 +39,3 @@ class MainPage(BasePage):
         eng_test = self.browser.find_element(*MainPageLocators.ENG_TEXT).text
         assert eng_test == "Welcome!"
 
-    # def fill_registration_fields_and_register(self):
-    #     self.browser.find_element(*LoginPageLocators.EMAIL_ENTRY_FIELD).send_keys(reg_email)
-    #     self.browser.find_element(*LoginPageLocators.PASSWORD_ENTRY_FIELD).send_keys(reg_password)
-    #     self.browser.find_element(*LoginPageLocators.REPEAT_PASSWORD_ENTRY_FIELD).send_keys(reg_password)
-    #
-    #     self.browser.find_element(*LoginPageLocators.REGISTRATION_BUTTON).click()

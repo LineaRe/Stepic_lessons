@@ -32,7 +32,6 @@ class ProductPageLocators:
 
     ALERT_MESSAGE = (By.CSS_SELECTOR, ".alert:nth-child(1)")
     PRODUCT_NAME_IN_ALERT = (By.CSS_SELECTOR, ".alert:nth-child(1) strong")
-    MESSAGE_TEXT = (By.CSS_SELECTOR, "")
 
     BASKET_PRICE_MESSAGE = (By.CSS_SELECTOR, ".alertinner>p>strong")
 
