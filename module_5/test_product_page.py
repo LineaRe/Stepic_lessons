@@ -1,7 +1,4 @@
-from selenium.common.exceptions import NoAlertPresentException
-from selenium.webdriver.common.by import By
 from .pages.product_page import ProductPage
-from .pages.base_page import BasePage
 import pytest
 
 link = "http://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook_209"

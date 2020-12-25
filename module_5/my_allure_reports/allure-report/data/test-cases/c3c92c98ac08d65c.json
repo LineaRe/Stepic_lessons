@@ -1,0 +1,76 @@
+{
+  "uid" : "c3c92c98ac08d65c",
+  "name" : "test_message_disappeared_after_adding_product_to_basket",
+  "fullName" : "untitled1.Stepik_Course_Autotests.module_5.test_product_page.TestProductPage#test_message_disappeared_after_adding_product_to_basket",
+  "historyId" : "a9ae61cb3b7ce4f002ca79d64b518624",
+  "time" : {
+    "start" : 1608827184115,
+    "stop" : 1608827184115,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "statusMessage" : "XFAIL fixing in progress\n\n_pytest.config.exceptions.UsageError: Test should contain language",
+  "statusTrace" : "request = <SubRequest 'browser' for <Function test_message_disappeared_after_adding_product_to_basket>>\n\n    @pytest.fixture(scope=\"function\")\n    def browser(request):\n        language = request.config.getoption(\"language\")\n    \n        if language not in [\"ru\", \"en-GB\", \"es\", \"fr\"]:\n>           raise pytest.UsageError(\"Test should contain language\")\nE           _pytest.config.exceptions.UsageError: Test should contain language\n\n../untitled1/Stepik_Course_Autotests/module_5/conftest.py:17: UsageError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "browser",
+    "time" : {
+      "start" : 1608827184115,
+      "stop" : 1608827184115,
+      "duration" : 0
+    },
+    "status" : "broken",
+    "statusMessage" : "_pytest.config.exceptions.UsageError: Test should contain language\n",
+    "statusTrace" : "  File \"/home/polina/PycharmProjects/untitled1/venv/lib/python3.6/site-packages/pluggy/callers.py\", line 187, in _multicall\n    res = hook_impl.function(*args)\n  File \"/home/polina/PycharmProjects/untitled1/venv/lib/python3.6/site-packages/_pytest/fixtures.py\", line 1124, in pytest_fixture_setup\n    result = call_fixture_func(fixturefunc, request, kwargs)\n  File \"/home/polina/PycharmProjects/untitled1/venv/lib/python3.6/site-packages/_pytest/fixtures.py\", line 921, in call_fixture_func\n    fixture_result = next(generator)\n  File \"/home/polina/PycharmProjects/untitled1/Stepik_Course_Autotests/module_5/conftest.py\", line 17, in browser\n    raise pytest.UsageError(\"Test should contain language\")\n",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "tag",
+    "value" : "@pytest.mark.xfail(reason='fixing in progress')"
+  }, {
+    "name" : "parentSuite",
+    "value" : "untitled1.Stepik_Course_Autotests.module_5"
+  }, {
+    "name" : "suite",
+    "value" : "test_product_page"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestProductPage"
+  }, {
+    "name" : "host",
+    "value" : "polina-ThinkPad-T420"
+  }, {
+    "name" : "thread",
+    "value" : "8081-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "untitled1.Stepik_Course_Autotests.module_5.test_product_page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ "@pytest.mark.xfail(reason='fixing in progress')" ]
+  },
+  "source" : "c3c92c98ac08d65c.json",
+  "parameterValues" : [ ]
+}

@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Dec 24 19:27:04 MSK 2020","Thu Dec 24 19:27:08 MSK 2020","3716","untitled1.Stepik_Course_Autotests.module_5","test_product_page","TestProductPage","","","test_guest_can_see_success_message_after_adding_product_to_basket",""
+"skipped","Thu Dec 24 19:27:14 MSK 2020","Thu Dec 24 19:27:18 MSK 2020","4132","untitled1.Stepik_Course_Autotests.module_5","test_product_page","TestProductPage","","","test_delete_item_from_basket",""
+"skipped","Thu Dec 24 19:27:09 MSK 2020","Thu Dec 24 19:27:13 MSK 2020","3615","untitled1.Stepik_Course_Autotests.module_5","test_product_page","TestProductPage","","","test_message_disappeared_after_adding_product_to_basket",""
+"passed","Thu Dec 24 19:26:58 MSK 2020","Thu Dec 24 19:27:03 MSK 2020","4240","untitled1.Stepik_Course_Autotests.module_5","test_product_page","TestProductPage","","","test_guest_can_add_product_to_basket",""

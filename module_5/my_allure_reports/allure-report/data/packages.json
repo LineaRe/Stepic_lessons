@@ -1,0 +1,61 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "children" : [ {
+    "name" : "untitled1.Stepik_Course_Autotests.module_5.test_product_page",
+    "children" : [ {
+      "name" : "test_guest_can_add_product_to_basket",
+      "uid" : "75e0b7fc0e032e63",
+      "parentUid" : "377bc9b1dab9c75ca671336bb6cf505a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1608827218796,
+        "stop" : 1608827223036,
+        "duration" : 4240
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_guest_can_see_success_message_after_adding_product_to_basket",
+      "uid" : "8235506fa9860082",
+      "parentUid" : "377bc9b1dab9c75ca671336bb6cf505a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1608827224504,
+        "stop" : 1608827228220,
+        "duration" : 3716
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_message_disappeared_after_adding_product_to_basket",
+      "uid" : "8ccbf194714b27d8",
+      "parentUid" : "377bc9b1dab9c75ca671336bb6cf505a",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1608827229716,
+        "stop" : 1608827233331,
+        "duration" : 3615
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_delete_item_from_basket",
+      "uid" : "2da3850cb578ff3c",
+      "parentUid" : "377bc9b1dab9c75ca671336bb6cf505a",
+      "status" : "skipped",
+      "time" : {
+        "start" : 1608827234837,
+        "stop" : 1608827238969,
+        "duration" : 4132
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "untitled1.Stepik_Course_Autotests.module_5.test_product_page"
+  } ],
+  "name" : "packages"
+}

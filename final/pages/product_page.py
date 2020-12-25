@@ -1,7 +1,5 @@
-import pytest
 from .base_page import BasePage
 from .locators import ProductPageLocators
-
 
 
 link = "http://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook_209"
@@ -12,8 +10,6 @@ class ProductPage(BasePage):
         self.browser.get(link)
         button_add_to_basket = self.browser.find_element(*ProductPageLocators.ADD_TO_BASKET_BUTTON)
         button_add_to_basket.click()
-
-        # self.solve_quiz_and_get_code()
 
         self.should_be_name_product()
         self.should_be_price()
