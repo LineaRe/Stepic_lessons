@@ -1,14 +1,14 @@
-from .base_page import BasePage
-from .locators import MainPageLocators
 from .locators import LoginPageLocators
-from selenium.webdriver.support.ui import Select
+from .locators import MainPageLocators
 from .base_page import BasePage
-from .login_page import LoginPage
 from faker import Faker
 
+#Data
 fake = Faker()
 reg_email = fake.email()
 reg_password = "zxcvbnm1234567"
+welcome_text = "Thanks for registering!"
+
 
 class LoginPage(BasePage):
     def should_be_login_page(self):
@@ -28,11 +28,17 @@ class LoginPage(BasePage):
         self.is_element_present(*LoginPageLocators.REGISTRATION_FORM), "Registration form is not presented"
         # assert True
 
-    def fill_registration_fields_and_register(self):
+    def go_to_login_page(self):
+        login_link = self.browser.find_element(*MainPageLocators.LOGIN_LINK)
+        login_link.click()
+
+    def fill_registration_fields_and_register_eng(self):
         self.browser.find_element(*LoginPageLocators.EMAIL_ENTRY_FIELD).send_keys(reg_email)
         self.browser.find_element(*LoginPageLocators.PASSWORD_ENTRY_FIELD).send_keys(reg_password)
         self.browser.find_element(*LoginPageLocators.REPEAT_PASSWORD_ENTRY_FIELD).send_keys(reg_password)
 
         self.browser.find_element(*LoginPageLocators.REGISTRATION_BUTTON).click()
+        welcome_message = self.browser.find_element(*LoginPageLocators.WELCOME_MESSAGE_ALERT).text
 
+        assert welcome_text == welcome_message, "New user could not register"
 

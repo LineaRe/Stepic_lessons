@@ -1,3 +1,4 @@
+import pytest
 from .pages.main_page import MainPage
 
 link = "http://selenium1py.pythonanywhere.com/"
@@ -20,11 +21,13 @@ class TestMainPage:
         page.open()
         page.find_items()
 
+    @pytest.mark.russian
     def test_change_language_to_russian(self, browser):
         page = MainPage(browser, link)
         page.open()
         page.change_language_to_russian()
 
+    @pytest.mark.english
     def test_change_language_to_english(self, browser):
         page = MainPage(browser, link)
         page.open()
